@@ -43,3 +43,19 @@ Change `long_form.mode` to one of:
 - `extend` (continue an existing video)
 - `remaster` (video refinement)
 
+
+## Localhost UI (Gradio)
+
+A UI alternative to CLI commands is available at `gradio/long_form_app.py`.
+
+```bash
+python gradio/long_form_app.py --config configs/diffusion/inference/long_form_30s.py --host 127.0.0.1 --port 7861
+```
+
+Then open `http://127.0.0.1:7861` in your browser.
+
+The UI supports:
+- `generate` (text-to-long-video)
+- `extend` (source video + continuation prompt)
+- `remaster` (source video + enhancement prompt)
+
